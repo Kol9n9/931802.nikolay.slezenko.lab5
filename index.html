@@ -5,10 +5,51 @@
 	<title>Task 5</title>
 	<link type="text/css" rel="stylesheet" href="css/reset.css"/>
 	<link type="text/css" rel="stylesheet" href="css/main.css"/>
-	
+	<script>
+		let newsId = -1;
+		function closeNews(){
+			document.getElementById("wrapper").style.display = "none";
+			document.getElementById("news#"+newsId).style.display = "none";
+		}
+		function openNews(id){
+			newsId = id;
+			document.getElementById("wrapper").style.display = "block";
+			document.getElementById("news#"+newsId).style.display = "block";
+		}
+	</script>
 </head>	
 
 <body>
+	<div class="news">
+		<h3>Новость 1</h3>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores aut nihil! Corporis debitis labore fugiat id, eligendi ratione veritatis!</p>
+		<button onclick="openNews(1)">Откыть всплывающее окно</button>
+	</div>
+	<div class="news">
+		<h3 class="newsHeader">Новость 2</h3>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores aut nihil! Corporis debitis labore fugiat id, eligendi ratione veritatis!</p>
+		<button onclick="openNews(2)">Откыть всплывающее окно</button>
+	</div>
+	<div class="news">
+		<h3 class="newsHeader">Новость 3</h3>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores aut nihil! Corporis debitis labore fugiat id, eligendi ratione veritatis!</p>
+		<button onclick="openNews(3)">Откыть всплывающее окно</button>
+	</div>
 	
+	<div id="wrapper" onclick="closeNews();">
+	</div>
+	
+	<div class="fullnews" id="news#1">
+		<h2>Новость 1</h2>
+		<p>Новость 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate eveniet at voluptate corrupti commodi nobis ratione voluptatem! Vel animi totam cupiditate doloribus ad ab exercitationem officia eveniet impedit? Deleniti quasi nisi consectetur perspiciatis quibusdam nostrum, enim perferendis nam, magni molestias recusandae id libero vitae, repudiandae praesentium.</p>
+	</div>
+	<div class="fullnews" id="news#2">
+		<h2>Новость 2</h2>
+		<p>Новость 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate eveniet at voluptate corrupti commodi nobis ratione voluptatem! Vel animi totam cupiditate doloribus ad ab exercitationem officia eveniet impedit? Deleniti quasi nisi consectetur perspiciatis quibusdam nostrum, enim perferendis nam, magni molestias recusandae id libero vitae, repudiandae praesentium.</p>
+	</div>
+	<div class="fullnews" id="news#3">
+		<h2>Новость 3</h2>
+		<p>Новость 3: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate eveniet at voluptate corrupti commodi nobis ratione voluptatem! Vel animi totam cupiditate doloribus ad ab exercitationem officia eveniet impedit? Deleniti quasi nisi consectetur perspiciatis quibusdam nostrum, enim perferendis nam, magni molestias recusandae id libero vitae, repudiandae praesentium.</p>
+	</div>
 </body>
 </html>
